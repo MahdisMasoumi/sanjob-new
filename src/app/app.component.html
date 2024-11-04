@@ -59,12 +59,13 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <form class="d-flex justify-content-center">
+      <form (ngSubmit)="searchGoogle()" class="form">
         <input
-          class="form-control me-2"
-          type="search"
+          class="searchbox"
+          type="text"
+          [(ngModel)]="searchQuery"
+          name="search"
           placeholder="Search..."
-          aria-label="Search"
         />
       </form>
     </div>
@@ -72,30 +73,48 @@
 
   <div class="row text-center mt-5">
     <div class="col-4">
-      <img src="../assets/adwin.png" alt="Image 1" class="responsive-image" />
+      <a href="https://ad.sanjob.ca/" target="_blank">
+        <img
+          src="../assets/adwin.png"
+          alt="Image 1"
+          class="responsive-image image1"
+        />
+      </a>
     </div>
     <div class="col-4">
-      <img src="../assets/qimon.png" alt="Image 2" class="responsive-image" />
+      <a href="https://forum.sanjob.ca/?lang=en" target="_blank">
+        <img
+          src="../assets/qimon.png"
+          alt="Image 2"
+          class="responsive-image image2"
+        />
+      </a>
     </div>
     <div class="col-4">
-      <img src="../assets/ricky.png" alt="Image 3" class="responsive-image" />
+      <a href="https://needs.sanjob.ca/" target="_blank">
+        <img
+          src="../assets/ricky.png"
+          alt="Image 3"
+          class="responsive-image image3"
+        />
+      </a>
     </div>
   </div>
   <div class="row text-center">
     <div class="col-4 mb-4">
-      <button class="btn btn-info w-30" type="button">
+      <button class="btn btn-infoo w-30 image1" type="button">
         ADwin
         <p>"Advertise"</p>
       </button>
     </div>
     <div class="col-4 mb-4">
-      <button class="btn btn-info w-30" type="button">
+      <button class="btn btn-infoo w-30 image2" type="button">
         QAmin
         <p>"Question"</p>
       </button>
     </div>
     <div class="col-4 mb-4">
-      <button type="button" class="btn btn-info w-30">
+      <button class="btn btn-infoo w-30 image3" type="button">
         Riqi
         <p>"Request"</p>
       </button>
@@ -118,7 +137,7 @@
 >
   <div class="container p-2">
     <div class="row">
-      <div class="col-lg-4 col-md-12 mt-2 mb-2">
+      <div class="col-4 mt-1 text-center">
         <h5 class="text-uppercase">About Us</h5>
         <p>
           We are a company dedicated to providing the best services to our
@@ -126,7 +145,7 @@
         </p>
       </div>
 
-      <div class="col-lg-4 col-md-6 mt-2 mb-2">
+      <div class="col-4 mt-1 text-center">
         <h5 class="text-uppercase">Links</h5>
         <a href="https://www.instagram.com/sanjob.ca/" class="text-white"
           ><img src="../assets/insta.png" class="links"
@@ -141,7 +160,7 @@
         /></a>
       </div>
 
-      <div class="col-lg-4 col-md-6 mt-2 mb-2">
+      <div class="col-4 mt-1">
         <h5 class="text-uppercase">Contact</h5>
         <p>
           <i class="fas fa-home"></i> Canada<br />

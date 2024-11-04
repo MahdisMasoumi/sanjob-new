@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
+import { FormsModule } from '@angular/forms';
 
 import {
   Router,
@@ -12,11 +13,27 @@ import {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RouterLinkActive, RouterLink],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    RouterLinkActive,
+    RouterLink,
+    FormsModule,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  searchQuery: string = '';
+
+  searchGoogle() {
+    if (this.searchQuery.trim()) {
+      const forumSearchUrl = `https://forum.sanjob.ca/index.php?q=${encodeURIComponent(
+        this.searchQuery
+      )}`;
+      window.open(forumSearchUrl, '_blank');
+    }
+  }
   title = 'sanjob';
   isDarkTheme: boolean = false;
   isNavbarOpen: boolean = false;
@@ -31,7 +48,6 @@ export class AppComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   constructor(private router: Router) {
-    // Close the navbar whenever navigation ends
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -60,8 +76,6 @@ export class AppComponent {
 
   closeNavbar() {
     this.isNavbarOpen = false;
-
-    // Check if window and document are available (i.e., running in the browser)
     if (typeof document !== 'undefined') {
       const navbarCollapse = document.getElementById('navbarNav');
       if (navbarCollapse) {
@@ -70,6 +84,6 @@ export class AppComponent {
     }
   }
   navigateTo(link: string) {
-    this.router.navigate([link]); // Adjust the paths as necessary
+    this.router.navigate([link]);
   }
 }
