@@ -17,8 +17,9 @@
   font-size: 95%;
 }
 .fa-solid {
+  color: #282c23;
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 @media (max-width: 768px) {
   .container {
@@ -30,7 +31,7 @@
 
   .navbar-toggler {
     position: absolute;
-    right: 1rem;
+    right: 2 rem;
   }
 }
 .nav-item:last-child {
@@ -150,18 +151,25 @@
   }
 }
 .footer {
-  position: relative;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
   h5 {
     font-size: 90%;
+    @media (max-width: 768px) {
+      font-size: 50%;
+    }
   }
   p {
     font-size: 70%;
+    @media (max-width: 768px) {
+      font-size: 30%;
+    }
   }
   .links {
     width: 10%;
-    @media (max-width: 768px) {
-      width: 5%;
-    }
   }
   @media (min-height: 700px) {
     position: absolute;
@@ -209,10 +217,17 @@
     }
   }
   @media (max-width: 1000px) {
-    font-size: 55%;
+    font-size: 50%;
+    padding: 4px;
   }
 }
 .links {
   margin-right: 0.5rem;
   width: 12%;
+}
+
+.copyright {
+  @media (max-width: 768px) {
+    font-size: 30%;
+  }
 }
