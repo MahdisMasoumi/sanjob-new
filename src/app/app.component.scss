@@ -14,7 +14,6 @@
 .nav-link {
   color: #282c23;
   font-weight: bold;
-  font-size: 95%;
 }
 .fa-solid {
   color: #282c23;
@@ -47,7 +46,8 @@
 }
 
 .scroll {
-  background-color: #000;
+  z-index: 2000;
+  background-color: rgb(45, 128, 124);
   color: white;
 }
 
@@ -199,20 +199,17 @@
   background: transparent;
   border: #1f221b 1px solid;
   border-radius: 0.6rem;
-  opacity: 0.8;
   &:hover {
     cursor: pointer;
-    opacity: 1;
     font-weight: bolder;
     color: white;
-    background-color: #1f221b;
+    background-color: rgb(45, 128, 124);
   }
   p {
     margin-bottom: 0;
     font-size: 70%;
     &:hover {
       cursor: pointer;
-      opacity: 1;
       font-weight: bolder;
     }
   }
