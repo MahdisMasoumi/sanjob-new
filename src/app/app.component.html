@@ -1,0 +1,158 @@
+<header class="container-fluid py-3 border-bottom">
+  <div
+    class="container d-flex justify-content-center align-items-center position-relative"
+  >
+    <!-- Navbar toggler button -->
+    <button
+      class="navbar-toggler d-lg-none position-absolute end-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://ad.sanjob.ca/">Advertise </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://forum.sanjob.ca/?lang=en"
+            >Question</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://needs.sanjob.ca/">Request</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://sanjob.ca/businessdirectory/?ref=sanjob.ca"
+            >Business Directory</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://forum.sanjob.ca/login.php?hl=en&ref=https://forum.sanjob.ca"
+            >Sign in
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- main -->
+<div class="container-fluid bg-light text-center py-5 about-page">
+  <div class="row">
+    <div class="col-12">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <form class="d-flex justify-content-center">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search..."
+          aria-label="Search"
+        />
+      </form>
+    </div>
+  </div>
+
+  <div class="row text-center mt-5">
+    <div class="col-4">
+      <img src="../assets/adwin.png" alt="Image 1" class="responsive-image" />
+    </div>
+    <div class="col-4">
+      <img src="../assets/qimon.png" alt="Image 2" class="responsive-image" />
+    </div>
+    <div class="col-4">
+      <img src="../assets/ricky.png" alt="Image 3" class="responsive-image" />
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-4 mb-4">
+      <button class="btn btn-info w-30" type="button">
+        ADwin
+        <p>"Advertise"</p>
+      </button>
+    </div>
+    <div class="col-4 mb-4">
+      <button class="btn btn-info w-30" type="button">
+        QAmin
+        <p>"Question"</p>
+      </button>
+    </div>
+    <div class="col-4 mb-4">
+      <button type="button" class="btn btn-info w-30">
+        Riqi
+        <p>"Request"</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<button
+  *ngIf="showScrollBtn"
+  (click)="scrollToTop()"
+  class="btn scroll"
+  style="position: fixed; bottom: 20px; right: 20px"
+>
+  <i class="fas fa-chevron-up"></i>
+</button>
+<footer
+  class="container-fluid bg-dark text-white text-center text-lg-start mt-5 footer"
+>
+  <div class="container p-2">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mt-2 mb-2">
+        <h5 class="text-uppercase">About Us</h5>
+        <p>
+          We are a company dedicated to providing the best services to our
+          customers. Our mission is to deliver quality and satisfaction.
+        </p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mt-2 mb-2">
+        <h5 class="text-uppercase">Links</h5>
+        <a href="https://www.instagram.com/sanjob.ca/" class="text-white"
+          ><img src="../assets/insta.png" class="links"
+        /></a>
+        <a
+          href="https://www.youtube.com/channel/UC2YxbX0B85JGUjThTyC8R5Q"
+          class="text-white"
+          ><img src="../assets/youtube.png" class="links"
+        /></a>
+        <a href="https://x.com/sanjob_ca" class="text-white"
+          ><img src="../assets/twitter.png" class="links"
+        /></a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mt-2 mb-2">
+        <h5 class="text-uppercase">Contact</h5>
+        <p>
+          <i class="fas fa-home"></i> Canada<br />
+          <i class="fas fa-envelope"></i> email<br />
+          <i class="fas fa-phone"></i> +123 456 7890
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2024 SanJob
+  </div>
+</footer>

@@ -1,0 +1,164 @@
+.nav-item {
+  text-align: center;
+  width: auto;
+  border-right: 1px solid #000;
+  @media (max-width: 768px) {
+    border-right: none;
+    width: auto;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+.nav-link {
+  font-weight: bold;
+  font-size: 95%;
+}
+.fa-solid {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+  }
+}
+.nav-item:last-child {
+  border-right: none;
+}
+
+.nav-link.active {
+  color: rgb(45, 128, 124);
+}
+
+.nav-link:hover {
+  color: rgb(45, 128, 124);
+}
+
+.icon-light {
+  color: rgb(255, 0, 0);
+}
+
+.icon-dark {
+  color: rgb(45, 128, 124);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.scroll {
+  background-color: #000;
+  color: white;
+}
+
+.logo {
+  opacity: 0;
+  transform: translateY(-100px); /* Start from above */
+  animation: slideIn 1s forwards; /* Slide in animation */
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.logo img {
+  width: 30%;
+  height: auto;
+}
+.form {
+  width: 100%;
+}
+.form-control {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 80%;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    font-size: 70%;
+  }
+}
+.responsive-image {
+  width: 30%;
+  height: 80%;
+  @media (max-width: 768px) {
+    width: 40%;
+    height: 85%;
+  }
+}
+.footer {
+  position: relative;
+  h5 {
+    font-size: 90%;
+  }
+  p {
+    font-size: 70%;
+  }
+  .links {
+    width: 10%;
+    @media (max-width: 768px) {
+      width: 5%;
+    }
+  }
+  @media (min-height: 700px) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  @media (max-height: 800px) {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; // Adds spacing above footer for better layout on shorter screens
+  }
+}
+
+.about-page {
+  font-family: "Comic Sans MS", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 8rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+.btn-info {
+  border: #000 2px solid;
+  font-size: 90%;
+  p {
+    margin-bottom: 0;
+    font-size: 60%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 45%;
+  }
+}
+.links {
+  margin-right: 0.5rem;
+  width: 12%;
+}
