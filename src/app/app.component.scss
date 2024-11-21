@@ -30,7 +30,7 @@
 
   .navbar-toggler {
     position: absolute;
-    right: 2 rem;
+    right: 2rem;
   }
 }
 .nav-item:last-child {
@@ -57,6 +57,132 @@
   animation: slideIn 1.5s forwards;
 }
 
+.image1 {
+  animation: moveInLeft 1.5s forwards;
+}
+.image2 {
+  animation: moveInBottom 1.5s forwards;
+}
+.image3 {
+  animation: moveInRight 1.5s forwards;
+}
+.logo img {
+  width: 30%;
+  height: auto;
+}
+.form {
+  width: 100%;
+}
+.searchbox {
+  color: #1f221b;
+  background-size: 16px 16px;
+  background-image: url("../assets/icon.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 2rem;
+  height: 2rem;
+  width: 80%;
+  border: #1f221b solid 1px;
+  border-radius: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    font-size: 70%;
+  }
+}
+
+.responsive-image {
+  width: 35%;
+  height: 70%;
+  margin: 0 auto;
+  display: block;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    width: 15%;
+    height: 55%;
+  }
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  h5 {
+    font-size: 90%;
+    @media (max-width: 768px) {
+      font-size: 50%;
+    }
+  }
+
+  .links {
+    width: 3%;
+    margin: 0 10px; // Adds horizontal spacing between each link
+    display: inline-block;
+  }
+  @media (min-height: 700px) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  @media (max-height: 800px) {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.about-page {
+  font-family: "Comic Sans MS", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 8rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.btn-infoo {
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border: #1f221b 1px solid;
+  border-radius: 0.6rem;
+  width: auto;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  &:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(45, 128, 124);
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 70%;
+    &:hover {
+      cursor: pointer;
+      font-weight: bolder;
+    }
+  }
+  @media (max-width: 1000px) {
+    font-size: 60%;
+    padding: 0.5rem;
+    max-width: 150px;
+    margin: 5px auto;
+  }
+}
+
+.copyright {
+  @media (max-width: 768px) {
+    font-size: 30%;
+  }
+}
 @keyframes slideIn {
   to {
     opacity: 1;
@@ -102,120 +228,5 @@
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-.image1 {
-  animation: moveInLeft 1.5s forwards;
-}
-.image2 {
-  animation: moveInBottom 1.5s forwards;
-}
-.image3 {
-  animation: moveInRight 1.5s forwards;
-}
-.logo img {
-  width: 30%;
-  height: auto;
-}
-.form {
-  width: 100%;
-}
-.searchbox {
-  color: #1f221b;
-  background-size: 16px 16px;
-  background-image: url("../assets/icon.png");
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  padding-left: 2rem;
-  height: 2rem;
-  width: 80%;
-  border: #1f221b solid 1px;
-  border-radius: 0.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-
-  @media (max-width: 768px) {
-    margin-top: 2rem;
-    font-size: 70%;
-  }
-}
-
-.responsive-image {
-  width: 35%;
-  height: 80%;
-
-  @media (max-width: 768px) {
-    width: 40%;
-    height: 85%;
-  }
-}
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000;
-  h5 {
-    font-size: 90%;
-    @media (max-width: 768px) {
-      font-size: 50%;
-    }
-  }
-
-  .links {
-    width: 3%;
-  }
-  @media (min-height: 700px) {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  @media (max-height: 800px) {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
-  }
-}
-
-.about-page {
-  font-family: "Comic Sans MS", sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 8rem;
-
-  @media (max-width: 768px) {
-    padding: 1.5rem;
-  }
-}
-
-.btn-infoo {
-  background: transparent;
-  border: #1f221b 1px solid;
-  border-radius: 0.6rem;
-  &:hover {
-    cursor: pointer;
-    font-weight: bolder;
-    color: white;
-    background-color: rgb(45, 128, 124);
-  }
-  p {
-    margin-bottom: 0;
-    font-size: 70%;
-    &:hover {
-      cursor: pointer;
-      font-weight: bolder;
-    }
-  }
-  @media (max-width: 1000px) {
-    font-size: 50%;
-    padding: 4px;
-  }
-}
-
-.copyright {
-  @media (max-width: 768px) {
-    font-size: 30%;
   }
 }
