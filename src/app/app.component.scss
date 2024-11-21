@@ -162,14 +162,9 @@
       font-size: 50%;
     }
   }
-  p {
-    font-size: 70%;
-    @media (max-width: 768px) {
-      font-size: 30%;
-    }
-  }
+
   .links {
-    width: 10%;
+    width: 3%;
   }
   @media (min-height: 700px) {
     position: absolute;
@@ -217,10 +212,6 @@
     font-size: 50%;
     padding: 4px;
   }
-}
-.links {
-  margin-right: 0.5rem;
-  width: 12%;
 }
 
 .copyright {
